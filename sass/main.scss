@@ -154,4 +154,9 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-@import 'module/logo.scss'
+// layout
+@import 'layout/_header.scss';
+@import 'layout/_content.scss';
+
+// module
+@import 'module/logo.scss';

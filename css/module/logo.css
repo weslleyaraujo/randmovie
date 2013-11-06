@@ -1,5 +1,5 @@
 .logo { width: 646px; text-align: center; margin: 250px auto 0 auto; -webkit-transform: scale(1.5); -moz-transform: scale(1.5); -ms-transform: scale(1.5); -o-transform: scale(1.5); transform: scale(1.5); -webkit-transition: 2s; -moz-transition: 2s; -o-transition: 2s; transition: 2s; }
 .logo .logo-image { width: 100%; }
-.logo.is-positioned { margin: 125px auto 0 auto; -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); transform: scale(1); }
+.logo.is-positioned { margin: 100px auto 0 auto; -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); transform: scale(1); }
 
 .logo-movie-icon { width: 70px; height: 68px; display: block; margin: 25px auto 0 auto; background: url('../../img/film-strip.png?1383702885'); }
