@@ -1,3 +1,5 @@
+@import 'compass/css3';
+
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
 /*
@@ -154,6 +156,14 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.fade-in-content {
+  @include transition(1.5s);
+  @include opacity(0);
+  &.is-visible {
+    @include opacity(1);
+  }
+}
+
 // layout
 @import 'layout/_header.scss';
 @import 'layout/_content.scss';

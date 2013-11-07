@@ -6,7 +6,7 @@ $module-name: logo;
   text-align: center;
   margin: 250px auto 0 auto;
   @include transform(scale(1.5));
-  @include transition(2s);
+  @include transition(1s);
 	.#{$module-name}-image {
 		width: 100%;
 	}
@@ -20,5 +20,13 @@ $module-name: logo;
 	height: 68px;
 	display: block;
 	margin: 25px auto 0 auto;
+	top: -15px;
+	position: relative;
+  @include opacity(0);
+  @include transition(1s);
 	@include background(image-url('film-strip.png'));
+	&.is-visible {
+		top: 5px;
+  	@include opacity(1);
+	}
 }
