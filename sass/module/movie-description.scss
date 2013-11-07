@@ -5,6 +5,7 @@ $module-name: movie-description;
 	width: 870px;
 	margin: 0 auto;
 	font-size: 22px;
+	min-height: 480px;
 }
 .#{$module-name}-image {
   float: left;

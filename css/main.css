@@ -44,7 +44,7 @@ textarea { resize: vertical; }
 /* ========================================================================== Author's custom styles ========================================================================== */
 .l-header { min-height: 315px; }
 
-.l-content { min-height: 870px; }
+.l-content { min-height: 630px; }
 
 .logo { width: 646px; text-align: center; margin: 250px auto 0 auto; -webkit-transform: scale(1.5); -moz-transform: scale(1.5); -ms-transform: scale(1.5); -o-transform: scale(1.5); transform: scale(1.5); -webkit-transition: 2s; -moz-transition: 2s; -o-transition: 2s; transition: 2s; }
 .logo .logo-image { width: 100%; }
@@ -52,7 +52,7 @@ textarea { resize: vertical; }
 
 .logo-movie-icon { width: 70px; height: 68px; display: block; margin: 25px auto 0 auto; background: url('../img/film-strip.png?1383702885'); }
 
-.movie-description { width: 870px; margin: 0 auto; font-size: 22px; }
+.movie-description { width: 870px; margin: 0 auto; font-size: 22px; min-height: 480px; }
 
 .movie-description-image { float: left; width: 300px; margin: 0 20px 0 0; }
 
@@ -61,3 +61,9 @@ textarea { resize: vertical; }
 .movie-description-info { float: left; width: 550px; }
 
 .movie-description-year { color: #8C8C8C; font-weight: 700; font-size: 33px; margin: 10px 0; text-align: right; }
+
+.btn { vertical-align: middle; cursor: pointer; white-space: nowrap; text-align: center; text-decoration: none; padding: 20px; font-size: 30px; background-color: #515151; color: #FFF; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; }
+
+.icon { position: relative; top: 1px; line-height: 1; display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; }
+
+.icon-movie { background-image: url('../img/icon-movie.png?1383787801'); width: 32px; height: 34px; }
