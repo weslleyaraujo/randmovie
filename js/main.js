@@ -5,7 +5,7 @@ var randMovie = (function () {
 		show: function () {
 			this.$logo.addClass('is-positioned');
 			this.$movieIcon.addClass('is-visible');
-			this.$content.addClass('is-visible');
+			this.$content.removeClass('is-hidden').addClass('is-visible');
 		},
 
 		init: function (){
@@ -28,3 +28,8 @@ var randMovie = (function () {
 	return _app;
 
 }());
+
+randMovie.init();
+setInterval( function () {
+	randMovie.show();
+}, 3000 );
