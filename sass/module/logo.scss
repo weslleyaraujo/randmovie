@@ -5,6 +5,8 @@ $module-name: logo;
   width: 646px;
   text-align: center;
   margin: 250px auto 0 auto;
+  font-size: 100px;
+  font-weight: 300;
   @include transform(scale(1.5));
   @include transition(1s);
 	.#{$module-name}-image {
