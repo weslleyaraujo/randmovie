@@ -1,5 +1,6 @@
 @import 'compass/css3';
 $module-name: btn;
+$default-btn-color: #0076C5;
 
 .#{$module-name} {
 	vertical-align: middle;
@@ -9,7 +10,7 @@ $module-name: btn;
 	text-decoration: none;
 	padding: 20px;
 	font-size: 30px;
-	background-color: #515151;
+	background-color: $default-btn-color;
 	color: #FFF;
 	@include border-radius(5px);
 	@include inline-block;

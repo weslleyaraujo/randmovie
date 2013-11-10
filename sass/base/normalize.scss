@@ -415,4 +415,7 @@ table {
 body {
   font-family: 'Open Sans';
   font-weight: 300;
+  &.is-overflowed {
+    overflow: hidden;
+  }
 }

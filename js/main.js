@@ -3,9 +3,10 @@ var randMovie = (function () {
 
 	_app = {
 		show: function () {
+			this.$body.removeClass('is-overflowed');
 			this.$logo.addClass('is-positioned');
 			this.$movieIcon.addClass('is-visible');
-			this.$content.removeClass('is-hidden').addClass('is-visible');
+			this.$content.addClass('is-visible');
 		},
 
 		init: function (){
@@ -18,6 +19,7 @@ var randMovie = (function () {
 			this.$logo = $('.logo');
 			this.$movieIcon = $('.logo-movie-icon');
 			this.$content = $('.fade-in-content');
+			this.$body = $(document.body);
 		},
 
 		bind: function (){
