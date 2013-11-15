@@ -2,8 +2,39 @@ require 'sinatra'
 require 'shotgun'
 require 'mongo'
 require 'json/ext'
+require 'sinatra/base'
+require 'sinatra/assetpack'
 
 include Mongo
+
+set :root, File.dirname(__FILE__)
+
+register Sinatra::AssetPack
+
+assets {
+  serve '/js',	from: 'public/js'
+  serve '/css',	from: 'public/css'
+  serve '/img',	from: 'public/img'
+
+  js :app, [
+    '/js/app/app.js',
+    '/js/app/*/*.js',
+    '/js/main.js'
+  ]
+
+  js :vendor, [
+  	'js/vendor/jquery-1.10.2.min.js',
+  	'js/plugins.js'
+  ]
+
+  css :application, [
+    '/css/base/*.css',
+    '/css/main.css'
+  ]
+
+  js_compression  :jsmin    # :jsmin | :yui | :closure | :uglify
+  css_compression :simple   # :simple | :sass | :yui | :sqwish
+}
 
 # mongo config
 configure do
