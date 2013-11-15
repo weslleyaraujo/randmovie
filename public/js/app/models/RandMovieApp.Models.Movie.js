@@ -6,5 +6,6 @@
 
 RandMovieApp.Models.Movie = Backbone.Model.extend({
 	initialize: function () {
+		console.log(this.toJSON());
 	}
 });

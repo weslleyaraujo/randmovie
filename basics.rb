@@ -18,7 +18,9 @@ assets {
 
   js :app, [
     '/js/app/app.js',
-    '/js/app/*/*.js',
+    '/js/app/models/*.js',
+    '/js/app/collections/*.js',
+    '/js/app/views/*.js',
     '/js/main.js'
   ]
 
@@ -43,15 +45,10 @@ configure do
 	set :mongo_db, conect.db('randmovie')
 end
 
-get '/api/get/*' do
-	params['captures'].delete('')
-	if params['captures'].empty?
-		countdb = settings.mongo_db['movies'].count()
-		movie = settings.mongo_db['movies'].find().limit(-1).skip(rand(countdb)).next_document()
-		movie.to_json
-	else
-		'search for ' + params['captures'].first.to_s
-	end
+get '/api/get' do
+	countdb = settings.mongo_db['movies'].count()
+	movie = settings.mongo_db['movies'].find().limit(-1).skip(rand(countdb)).next_document()
+	movie.to_json
 end
 
 get '/' do

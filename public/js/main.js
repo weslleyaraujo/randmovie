@@ -3,61 +3,23 @@ var randMovie = (function () {
 
 	_private = {
 		initialize: function () {
+			this.setLevels();
+			this.setCollections();
+		},
+
+		setLevels: function () {
 			this.collections = {};
+			this.models = {};
+			this.views = {};
 		},
 
 		setCollections: function () {
 			this.collections.movies = new RandMovieApp.Collections.Movies();
-		},
-
-		randLetter: function () {
-			var chars = "abcdefghijklmnopqurstuvwxyz",
-			notOk = true,
-			actual = "";
-			while(notOk) {
-				actual = chars.substr( Math.floor(Math.random() * 62), 1);
-				if (!_.isEmpty(actual)) {
-					notOk = false;
-					return actual;
-				}
-			}
-		},
-
-		randNumb: function () {
-			return Math.floor(Math.random()*11);
-		},
-
-		apiSearch: function () {
-			return [RandMovieApp.Config.apiUrl, '?',
-				RandMovieApp.Config.apiQuery,
-				this.randLetter(), '&',
-				RandMovieApp.Config.apiType, '&',
-				RandMovieApp.Config.apitLimit,
-				this.randNumb(), '&',
-				RandMovieApp.Config.apiOffset,
-				this.randNumb()
-			].join('');
-		},
-
-		getMovie: function () {
-			var that = this;
-			$.ajax({
-				url: that.apiSearch()
-			}).done(function (response) {
-				that.responseMovie(response);
-			}).fail(function (response) {
-				console.log('errorHandler', response);
-			});
-		},
-
-		responseMovie: function (response) {
-			console.log(response);
 		}
 	};
 
 	_app = {
 		init: function (){
-			_private.initialize();
 			this.dom();
 			this.bind();
 			return this;
@@ -71,7 +33,7 @@ var randMovie = (function () {
 		},
 
 		bind: function (){
-			_private.setCollections();
+			_private.initialize();
 		},
 
 		show: function () {
@@ -91,6 +53,7 @@ var randMovie = (function () {
 }());
 
 randMovie.init();
+
 setInterval( function () {
 	randMovie.show();
 }, 3000 );

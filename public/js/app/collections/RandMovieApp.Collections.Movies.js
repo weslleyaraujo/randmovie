@@ -5,13 +5,9 @@
  */
 
 RandMovieApp.Collections.Movies = Backbone.Collection.extend({
-	url: 'http://mymovieapi.com/?type=json&q=a&limit=10&offset=0',
-
-	initialize: function(attribute){
-		this.fetchHandler();
-	},
-
-	fetchHandler: function () {
+	url: '/api/get',
+	model: RandMovieApp.Models.Movie,
+	initialize: function(){
 		this.fetch();
 	}
 });
