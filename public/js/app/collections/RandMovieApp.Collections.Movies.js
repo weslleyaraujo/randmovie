@@ -6,8 +6,5 @@
 
 RandMovieApp.Collections.Movies = Backbone.Collection.extend({
 	url: '/api/get',
-	model: RandMovieApp.Models.Movie,
-	initialize: function(){
-		this.fetch();
-	}
+	model: RandMovieApp.Models.Movie
 });

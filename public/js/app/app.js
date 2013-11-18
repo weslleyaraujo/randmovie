@@ -14,3 +14,8 @@ var RandMovieApp = {
 RandMovieApp.Helpers.template = function (selector) {
 	return _.template($('[data-template='+ selector +']').html());
 };
+
+// setting underscore delimiters
+_.templateSettings = {
+	interpolate: /\{\{(.+?)\}\}/g
+};

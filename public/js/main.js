@@ -1,4 +1,5 @@
 var randMovie = (function () {
+	'use-strict';
 	var _app, _private;
 
 	_private = {
@@ -14,8 +15,10 @@ var randMovie = (function () {
 		},
 
 		setApp: function () {
-			this.collections.movie = new RandMovieApp.Collections.Movies();
-			this.views.movie = new RandMovieApp.Views.Movie();
+			this.collections.movies = new RandMovieApp.Collections.Movies();
+			this.views.movies = new RandMovieApp.Views.Movies({
+				collection: this.collections.movies
+			});
 		},
 
 	};

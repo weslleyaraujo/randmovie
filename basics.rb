@@ -48,7 +48,7 @@ end
 get '/api/get' do
 	countdb = settings.mongo_db['movies'].count()
 	movie = settings.mongo_db['movies'].find().limit(-1).skip(rand(countdb)).next_document()
-	movie.to_json
+	return movie.to_json
 end
 
 get '/' do

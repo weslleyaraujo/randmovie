@@ -7,7 +7,14 @@
 RandMovieApp.Views.Movie = Backbone.View.extend({
 	template: RandMovieApp.Helpers.template("movie"),
 
+	className: 'movie-description',
+
 	initialize: function () {
-		console.log('initialized', this.template());
+		this.render();
 	},
+
+	render: function () {
+		this.$el.html(this.template(this.model.toJSON()));
+		return this;
+	}
 });
