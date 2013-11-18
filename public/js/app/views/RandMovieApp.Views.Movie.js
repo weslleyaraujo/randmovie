@@ -5,8 +5,9 @@
  */
 
 RandMovieApp.Views.Movie = Backbone.View.extend({
-	// template: _.template($('[data-template="movie"]').html()),
+	template: RandMovieApp.Helpers.template("movie"),
+
 	initialize: function () {
-		console.log('initialized');
+		console.log('initialized', this.template());
 	},
 });
