@@ -4,7 +4,7 @@ var randMovie = (function () {
 	_private = {
 		initialize: function () {
 			this.setLevels();
-			this.setCollections();
+			this.setApp();
 		},
 
 		setLevels: function () {
@@ -13,9 +13,11 @@ var randMovie = (function () {
 			this.views = {};
 		},
 
-		setCollections: function () {
-			this.collections.movies = new RandMovieApp.Collections.Movies();
-		}
+		setApp: function () {
+			this.collections.movie = new RandMovieApp.Collections.Movies();
+			this.views.movie = new RandMovieApp.Views.Movie();
+		},
+
 	};
 
 	_app = {

@@ -7,11 +7,10 @@ var RandMovieApp = {
 	Models: {},
 	Collections: {},
 	Helpers: {},
-	Config: {
-		apiUrl: 'http://mymovieapi.com/',
-		apiType: 'type=json',
-		apiQuery: 'q=',
-		apitLimit: 'limit=',
-		apiOffset: 'offset='
-	}
+	Config: {}
+};
+
+/* Template helper */
+RandMovieApp.Helpers.template = function (selector) {
+	return _.template($('[data-template='+ selector +']').html());
 };
