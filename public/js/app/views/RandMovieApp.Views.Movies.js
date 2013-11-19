@@ -25,6 +25,7 @@ RandMovieApp.Views.Movies = Backbone.View.extend({
 			model: model
 		});
 		this.$el.html(movie.el);
+		randMovie.show();
 	},
 
 	success: function () {

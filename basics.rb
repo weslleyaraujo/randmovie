@@ -14,7 +14,9 @@ register Sinatra::AssetPack
 assets {
   serve '/js',	from: 'public/js'
   serve '/css',	from: 'public/css'
-  serve '/img',	from: 'public/img'
+  serve '/images',  from: 'public/images'
+  serve '/static/cover',	from: 'static/cover'
+
 
   js :app, [
     '/js/app/app.js',
@@ -46,6 +48,7 @@ configure do
 end
 
 get '/api/get' do
+  content_type 'text/json'
 	countdb = settings.mongo_db['movies'].count()
 	movie = settings.mongo_db['movies'].find().limit(-1).skip(rand(countdb)).next_document()
 	return movie.to_json

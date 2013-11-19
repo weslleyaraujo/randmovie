@@ -5,6 +5,10 @@
  */
 
 RandMovieApp.Models.Movie = Backbone.Model.extend({
+	defaults: {
+		'plot_simple' : 'No description :('
+	},
+
 	initialize: function () {
 	}
 });

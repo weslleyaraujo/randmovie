@@ -59,6 +59,3 @@ var randMovie = (function () {
 
 randMovie.init();
 
-setInterval( function () {
-	randMovie.show();
-}, 3000 );
