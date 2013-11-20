@@ -50,7 +50,7 @@ end
 get '/api/get' do
   content_type 'text/json'
 	countdb = settings.mongo_db['movies'].count()
-	movie = settings.mongo_db['movies'].find().limit(-1).skip(rand(countdb)).next_document()
+	movie = settings.mongo_db['movies'].find({ type: 'M' }).limit(-1).skip(rand(countdb)).next_document()
 	return movie.to_json
 end
 

@@ -25,6 +25,9 @@ var randMovie = (function () {
 
 	_app = {
 		init: function (){
+			// make sure window is on top
+			window.scrollTo(0);
+
 			this.dom();
 			this.bind();
 			return this;
@@ -58,4 +61,3 @@ var randMovie = (function () {
 }());
 
 randMovie.init();
-
