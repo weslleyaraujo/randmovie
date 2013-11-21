@@ -27,20 +27,17 @@ RandMovieApp.Views.Movies = Backbone.View.extend({
 		randMovie.show();
 	},
 
-	success: function () {
-		this.render();
-	},
-
-	error: function (response) {
-		// dont forget to deal with errors :)
-		console.log('error', response);
-	},
-
 	bind: function () {
 		this.collection.on('sync', this.syncHandler, this);
+		this.collection.on('error', this.errorHandler, this);
 	},
 
 	syncHandler: function () {
 		this.render();
+		randMovie.movieIn();
+	},
+
+	errorHandler: function () {
+		this.collection.fetch();
 	}
 });

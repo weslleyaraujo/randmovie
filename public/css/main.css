@@ -60,7 +60,7 @@ textarea { resize: vertical; }
 .logo-movie-icon { width: 70px; height: 68px; display: block; margin: 25px auto 0 auto; top: -15px; position: relative; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -webkit-transition: 1s; -moz-transition: 1s; -o-transition: 1s; transition: 1s; background: url('../images/film-strip.png?1384530605'); }
 .logo-movie-icon.is-visible { top: 5px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 
-.movie-description { width: 870px; margin: 0 auto; font-size: 22px; min-height: 480px; }
+.movie-description { width: 870px; margin: 0 auto; font-size: 22px; min-height: 400px; }
 
 .movie-description-image { float: left; width: 300px; margin: 0 20px 0 0; }
 

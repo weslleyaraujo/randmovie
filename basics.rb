@@ -47,11 +47,16 @@ configure do
 	set :mongo_db, conect.db('randmovie')
 end
 
+def get_movie(count)
+  return settings.mongo_db['movies'].find({ type: 'M' }).limit(-1).skip(rand(count)).next_document()
+end
+
 get '/api/get' do
   content_type 'text/json'
-	countdb = settings.mongo_db['movies'].count()
-	movie = settings.mongo_db['movies'].find({ type: 'M' }).limit(-1).skip(rand(countdb)).next_document()
-	return movie.to_json
+  countdb = settings.mongo_db['movies'].count()
+  while (movie = get_movie(countdb)) do
+    return movie.to_json
+  end
 end
 
 get '/' do

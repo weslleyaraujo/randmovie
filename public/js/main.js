@@ -28,11 +28,6 @@ var randMovie = (function () {
 			event.preventDefault();
 			elements.$item.removeClass('blur-in').addClass('blur-out');
 			levels.collections.movies.fetch();
-			var timer = setTimeout(function () {
-				elements.$item.removeClass('blur-out').addClass('blur-in');
-				timer = clearTimeout(timer);
-				console.log('eaeaeae');
-			}, 500);
 		}
 
 	};
@@ -70,6 +65,13 @@ var randMovie = (function () {
 
 		debug: function () {
 			return _private;
+		},
+
+		movieIn: function () {
+			var timer = setTimeout(function () {
+				elements.$item.removeClass('blur-out').addClass('blur-in');
+				timer = clearTimeout(timer);
+			}, 500);
 		}
 	};
 
