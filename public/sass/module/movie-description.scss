@@ -18,6 +18,9 @@ $module-name: movie-description;
 	font-weight: 800;
 	margin: 0;
 	line-height: 50px;
+	&.is-small {
+		font-size: 35px;
+	}
 }
 .#{$module-name}-info {
 	float: left;

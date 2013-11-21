@@ -2,7 +2,8 @@ var randMovie = (function () {
 	'use-strict';
 	var _app,
 		_private,
-		levels = {};
+		levels = {},
+		elements = {};
 
 	_private = {
 		initialize: function () {
@@ -25,7 +26,13 @@ var randMovie = (function () {
 
 		nextMovie: function (event) {
 			event.preventDefault();
+			elements.$item.removeClass('blur-in').addClass('blur-out');
 			levels.collections.movies.fetch();
+			var timer = setTimeout(function () {
+				elements.$item.removeClass('blur-out').addClass('blur-in');
+				timer = clearTimeout(timer);
+				console.log('eaeaeae');
+			}, 500);
 		}
 
 	};
@@ -41,23 +48,24 @@ var randMovie = (function () {
 		},
 
 		dom: function (){
-			this.$logo = $('.logo');
-			this.$movieIcon = $('.logo-movie-icon');
-			this.$content = $('.fade-in-content');
-			this.$body = $(document.body);
-			this.$next = $('#next-movie');
+			elements.$logo = $('.logo');
+			elements.$movieIcon = $('.logo-movie-icon');
+			elements.$content = $('.fade-in-content');
+			elements.$body = $(document.body);
+			elements.$next = $('#next-movie');
+			elements.$item = $('#movie-item');
 		},
 
 		bind: function (){
 			_private.initialize();
-			this.$next.on('click', _private.nextMovie);
+			elements.$next.on('click', _private.nextMovie);
 		},
 
 		show: function () {
-			this.$body.removeClass('is-overflowed');
-			this.$logo.addClass('is-positioned');
-			this.$movieIcon.addClass('is-visible');
-			this.$content.addClass('is-visible');
+			elements.$body.removeClass('is-overflowed');
+			elements.$logo.addClass('is-positioned');
+			elements.$movieIcon.addClass('is-visible');
+			elements.$content.addClass('is-visible');
 		},
 
 		debug: function () {

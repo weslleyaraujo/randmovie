@@ -1,6 +1,5 @@
 // compass css3
 @import 'compass/css3';
-@import 'animation';
 
 .fade-in-content {
   @include transition(1.5s);

@@ -65,6 +65,7 @@ textarea { resize: vertical; }
 .movie-description-image { float: left; width: 300px; margin: 0 20px 0 0; }
 
 .movie-description-title { font-size: 60px; font-style: italic; font-weight: 800; margin: 0; line-height: 50px; }
+.movie-description-title.is-small { font-size: 35px; }
 
 .movie-description-info { float: left; width: 550px; }
 

@@ -6,11 +6,13 @@
 
 RandMovieApp.Models.Movie = Backbone.Model.extend({
 	defaults: {
-		'plot_simple' : 'No description :('
+		'plot_simple' : 'No description :(',
+		'is_small': ''
 	},
 
 	initialize: function () {
 		this.setTitle();
+		this.titleLenght();
 	},
 
 	setTitle: function () {
@@ -18,6 +20,13 @@ RandMovieApp.Models.Movie = Backbone.Model.extend({
 		if (title.indexOf('"') != -1) {
 			title = title.split('"');
 			this.set('title', title[1] || '');
+		}
+	},
+
+	titleLenght: function () {
+		var title = this.get('title');
+		if (title.length >= 40) {
+			this.set('is_small', 'is-small');
 		}
 	}
 });
