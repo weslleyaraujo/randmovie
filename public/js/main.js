@@ -1,6 +1,8 @@
 var randMovie = (function () {
 	'use-strict';
-	var _app, _private;
+	var _app,
+		_private,
+		levels = {};
 
 	_private = {
 		initialize: function () {
@@ -9,23 +11,27 @@ var randMovie = (function () {
 		},
 
 		setLevels: function () {
-			this.collections = {};
-			this.models = {};
-			this.views = {};
+			levels.collections = {};
+			levels.models = {};
+			levels.views = {};
 		},
 
 		setApp: function () {
-			this.collections.movies = new RandMovieApp.Collections.Movies();
-			this.views.movies = new RandMovieApp.Views.Movies({
-				collection: this.collections.movies
+			levels.collections.movies = new RandMovieApp.Collections.Movies();
+			levels.views.movies = new RandMovieApp.Views.Movies({
+				collection: levels.collections.movies
 			});
 		},
+
+		nextMovie: function (event) {
+			event.preventDefault();
+			levels.collections.movies.fetch();
+		}
 
 	};
 
 	_app = {
 		init: function (){
-			console.log('init');
 			// make sure window is on top
 			window.scrollTo(0);
 
@@ -39,10 +45,12 @@ var randMovie = (function () {
 			this.$movieIcon = $('.logo-movie-icon');
 			this.$content = $('.fade-in-content');
 			this.$body = $(document.body);
+			this.$next = $('#next-movie');
 		},
 
 		bind: function (){
 			_private.initialize();
+			this.$next.on('click', _private.nextMovie);
 		},
 
 		show: function () {

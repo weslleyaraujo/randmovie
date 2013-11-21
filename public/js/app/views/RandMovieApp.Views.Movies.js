@@ -9,9 +9,8 @@ RandMovieApp.Views.Movies = Backbone.View.extend({
 
 	initialize: function () {
 		var self = this;
-		this.collection.fetch().done(function (){
-			self.render();
-		});
+		this.bind();
+		this.collection.fetch();
 	},
 
 	render: function(){
@@ -33,6 +32,15 @@ RandMovieApp.Views.Movies = Backbone.View.extend({
 	},
 
 	error: function (response) {
+		// dont forget to deal with errors :)
 		console.log('error', response);
+	},
+
+	bind: function () {
+		this.collection.on('sync', this.syncHandler, this);
+	},
+
+	syncHandler: function () {
+		this.render();
 	}
 });
