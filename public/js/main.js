@@ -25,6 +25,7 @@ var randMovie = (function () {
 
 	_app = {
 		init: function (){
+			console.log('init');
 			// make sure window is on top
 			window.scrollTo(0);
 

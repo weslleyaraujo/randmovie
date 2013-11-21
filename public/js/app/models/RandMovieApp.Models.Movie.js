@@ -17,7 +17,6 @@ RandMovieApp.Models.Movie = Backbone.Model.extend({
 		var title = $.trim(this.get('title'));
 		if (title.indexOf('"') != -1) {
 			title = title.split('"');
-			console.log(title);
 			this.set('title', title[1] || '');
 		}
 	}

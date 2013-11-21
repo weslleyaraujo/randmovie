@@ -1,0 +1,4 @@
+.fade-in-content { -webkit-transition: 1.5s; -moz-transition: 1.5s; -o-transition: 1.5s; transition: 1.5s; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
+.fade-in-content.is-visible { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
+
+.blur-out { -webkit-filter: blur(8px); -webkit-transform: scale(1.4, 1.4); opacity: 0.25; -webkit-transition: all 0.25s ease-out; transition: all 0.25s ease-out; visibility: hidden; }

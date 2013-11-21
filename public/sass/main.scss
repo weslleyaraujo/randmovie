@@ -156,13 +156,8 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-.fade-in-content {
-  @include transition(1.5s);
-  @include opacity(0);
-  &.is-visible {
-    @include opacity(1);
-  }
-}
+// no modular
+@import 'no-modular/helpers.scss';
 
 // layout
 @import 'layout/_header.scss';
