@@ -26,6 +26,7 @@ var randMovie = (function () {
 
 		nextMovie: function (event) {
 			event.preventDefault();
+			elements.$blur.removeClass('is-visible');
 			elements.$item.removeClass('blur-in').addClass('blur-out');
 			levels.collections.movies.fetch();
 		}
@@ -34,9 +35,6 @@ var randMovie = (function () {
 
 	_app = {
 		init: function (){
-			// make sure window is on top
-			window.scrollTo(0);
-
 			this.dom();
 			this.bind();
 			return this;
@@ -49,6 +47,7 @@ var randMovie = (function () {
 			elements.$body = $(document.body);
 			elements.$next = $('#next-movie');
 			elements.$item = $('#movie-item');
+			elements.$blur = $('.blur-effect');
 		},
 
 		bind: function (){
@@ -72,6 +71,13 @@ var randMovie = (function () {
 				elements.$item.removeClass('blur-out').addClass('blur-in');
 				timer = clearTimeout(timer);
 			}, 500);
+		},
+
+		setBlur: function (imdb_id) {
+			var timer = setTimeout(function () {
+				elements.$blur.css('backgroundImage', 'url(/static/cover/cover-'+ imdb_id +'.jpg)');
+				elements.$blur.addClass('is-visible');
+			}, 800);
 		}
 	};
 

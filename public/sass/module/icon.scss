@@ -7,8 +7,3 @@ $module-name: icon;
 	line-height: 1;
 	@include inline-block;
 }
-.#{$module-name}-movie {
-	background-image: image-url('icon-movie.png');
-	width: 32px;
-	height: 34px;
-}

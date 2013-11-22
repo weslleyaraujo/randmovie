@@ -24,6 +24,11 @@ RandMovieApp.Views.Movies = Backbone.View.extend({
 			model: model
 		});
 		this.$el.html(movie.el);
+
+		// set blur bg
+		randMovie.setBlur(model.get('imdb_id'));
+
+		// show movie
 		randMovie.show();
 	},
 

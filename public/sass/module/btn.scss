@@ -1,6 +1,6 @@
 @import 'compass/css3';
 $module-name: btn;
-$default-btn-color: #0076C5;
+$default-color: #0076C5;
 
 .#{$module-name} {
 	vertical-align: middle;
@@ -8,10 +8,14 @@ $default-btn-color: #0076C5;
 	white-space: nowrap;
 	text-align: center;
 	text-decoration: none;
-	padding: 20px;
-	font-size: 30px;
-	background-color: $default-btn-color;
+	padding: 15px 50px;
+	font-size: 20px;
+	background-color: $default-color;
 	color: #FFF;
 	@include border-radius(5px);
 	@include inline-block;
+	@include transition(1s);
+	&:hover {
+		background-color: shade($default-color, 20%);
+	}
 }

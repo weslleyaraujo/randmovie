@@ -10,7 +10,8 @@
     <%= css :application %>
   </head>
   <body class="is-overflowed">
-    <header class="clearfix l-header">
+    <div class="blur-effect"></div>
+    <header class="clearfix l-header is-above">
       <div class="wrap">
         <h1 class="logo">
           RandMovie
@@ -19,7 +20,7 @@
       </div>
     </header>
 
-    <div class="clearfix l-content fade-in-content">
+    <div class="clearfix l-content fade-in-content is-above">
       <div class="wrap">
 
         <div id="movie-item">
@@ -27,7 +28,6 @@
 
         <div class="clearfix aligncenter">
           <a href="#" class="btn" id="next-movie">
-            <span class="icon icon-movie"></span>
             Next Movie
           </a>
         </div>

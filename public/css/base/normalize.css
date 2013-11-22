@@ -124,3 +124,5 @@ table { border-collapse: collapse; border-spacing: 0; }
 /* ========================================================================== Body ========================================================================== */
 body { font-family: 'Open Sans'; font-weight: 300; }
 body.is-overflowed { overflow: hidden; }
+
+.is-above { position: relative; z-index: 1; }
