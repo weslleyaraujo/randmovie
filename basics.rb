@@ -62,3 +62,5 @@ end
 get '/' do
 	erb :index
 end
+
+# convert yourimage.png -channel RGBA -blur 0x3 your-blurred-image.png
