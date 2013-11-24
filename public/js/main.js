@@ -75,8 +75,12 @@ var randMovie = (function () {
 
 		setBlur: function (imdb_id) {
 			var timer = setTimeout(function () {
-				elements.$blur.css('backgroundImage', 'url(/static/cover/cover-'+ imdb_id +'.jpg)');
-				elements.$blur.addClass('is-visible');
+				elements.image = new Image();
+				elements.image.src = '/static/cover/cover-blur-'+ imdb_id +'.jpg';
+				elements.image.onload = function () {
+					elements.$blur.css('backgroundImage', 'url('+ elements.image.src +')');
+					elements.$blur.addClass('is-visible');
+				};
 			}, 800);
 		}
 	};

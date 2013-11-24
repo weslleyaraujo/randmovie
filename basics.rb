@@ -48,7 +48,7 @@ configure do
 end
 
 def get_movie(count)
-  return settings.mongo_db['movies'].find({ type: 'M' }).limit(-1).skip(rand(count)).next_document()
+  return settings.mongo_db['movies'].find({ type: 'M', has_image: 1 }).limit(-1).skip(rand(count)).next_document()
 end
 
 get '/api/get' do
