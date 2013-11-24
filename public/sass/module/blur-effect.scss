@@ -9,7 +9,6 @@ $module-name: blur-effect;
   background-repeat: no-repeat;
   z-index: 0;
   @include transition(1.3s);
-  // @include filter(blur(10px));
   @include opacity(0);
   @include background-size(100%);
   &.is-visible {
