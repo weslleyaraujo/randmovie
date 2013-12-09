@@ -7,6 +7,7 @@ $module-name: logo;
   margin: 250px auto 0 auto;
   font-size: 80px;
   font-weight: 300;
+  display: none;
   @include transform(scale(1.5));
   @include transition(1s);
 	.#{$module-name}-image {
@@ -15,21 +16,5 @@ $module-name: logo;
 	&.is-positioned {
   	margin: 10px auto 0 auto;
   	@include transform(scale(1));
-	}
-}
-.#{$module-name}-movie-icon {
-	width: 59px;
-	height: 60px;
-	display: block;
-	margin: 25px auto 0 auto;
-	top: -15px;
-	position: relative;
-	background-repeat: no-repeat;
-  @include opacity(0);
-  @include transition(1s);
-	@include background-image(image-url('film-strip.png'));
-	&.is-visible {
-		top: 5px;
-  	@include opacity(1);
 	}
 }

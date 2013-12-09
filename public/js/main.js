@@ -42,7 +42,6 @@ var randMovie = (function () {
 
 		dom: function (){
 			elements.$logo = $('.logo');
-			elements.$movieIcon = $('.logo-movie-icon');
 			elements.$content = $('.fade-in-content');
 			elements.$body = $(document.body);
 			elements.$next = $('#next-movie');
@@ -57,9 +56,11 @@ var randMovie = (function () {
 
 		show: function () {
 			elements.$body.removeClass('is-overflowed');
-			elements.$logo.addClass('is-positioned');
-			elements.$movieIcon.addClass('is-visible');
-			elements.$content.addClass('is-visible');
+      elements.$content.removeClass('is-hidden');
+      elements.$logo.fadeIn(function () {
+        elements.$logo.addClass('is-positioned');
+        elements.$content.addClass('is-visible');
+      });
 		},
 
 		debug: function () {
@@ -89,4 +90,6 @@ var randMovie = (function () {
 
 }());
 
-randMovie.init();
+$(window).load(function() {
+  randMovie.init();
+});

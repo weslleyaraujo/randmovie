@@ -125,4 +125,5 @@ table { border-collapse: collapse; border-spacing: 0; }
 body { font-family: 'Open Sans'; font-weight: 300; }
 body.is-overflowed { overflow: hidden; }
 
+/* ========================================================================== Staes ========================================================================== */
 .is-above { position: relative; z-index: 1; }

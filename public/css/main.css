@@ -49,18 +49,15 @@ textarea { resize: vertical; }
 
 .blur-in { visibility: visible; -webkit-filter: blur(0); -moz-filter: blur(0); filter: blur(0); -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); transform: scale(1); filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; -webkit-transition: all 0.25s ease-out; -moz-transition: all 0.25s ease-out; -o-transition: all 0.25s ease-out; transition: all 0.25s ease-out; }
 
-.l-header { min-height: 285px; }
+.l-header { min-height: 165px; }
 
 .l-content { min-height: 630px; }
 
-.logo { width: 646px; text-align: center; margin: 250px auto 0 auto; font-size: 80px; font-weight: 300; -webkit-transform: scale(1.5); -moz-transform: scale(1.5); -ms-transform: scale(1.5); -o-transform: scale(1.5); transform: scale(1.5); -webkit-transition: 1s; -moz-transition: 1s; -o-transition: 1s; transition: 1s; }
+.logo { width: 646px; text-align: center; margin: 250px auto 0 auto; font-size: 80px; font-weight: 300; display: none; -webkit-transform: scale(1.5); -moz-transform: scale(1.5); -ms-transform: scale(1.5); -o-transform: scale(1.5); transform: scale(1.5); -webkit-transition: 1s; -moz-transition: 1s; -o-transition: 1s; transition: 1s; }
 .logo .logo-image { width: 100%; }
 .logo.is-positioned { margin: 10px auto 0 auto; -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); transform: scale(1); }
 
-.logo-movie-icon { width: 59px; height: 60px; display: block; margin: 25px auto 0 auto; top: -15px; position: relative; background-repeat: no-repeat; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -webkit-transition: 1s; -moz-transition: 1s; -o-transition: 1s; transition: 1s; background-image: url('../images/film-strip.png?1385078633'); }
-.logo-movie-icon.is-visible { top: 5px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
-
-.movie-description { width: 870px; margin: 0 auto; font-size: 22px; min-height: 400px; }
+.movie-description { width: 870px; margin: 0 auto; font-size: 22px; min-height: 350px; padding-bottom: 10px; }
 
 .movie-description-image { float: left; width: 300px; margin: 0 20px 0 0; }
 
@@ -71,10 +68,8 @@ textarea { resize: vertical; }
 
 .movie-description-year { color: #8C8C8C; font-weight: 700; font-size: 33px; margin: 10px 0; text-align: right; }
 
-.btn { vertical-align: middle; cursor: pointer; white-space: nowrap; text-align: center; text-decoration: none; padding: 15px 50px; font-size: 20px; background-color: #0076c5; color: #FFF; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; -webkit-transition: 1s; -moz-transition: 1s; -o-transition: 1s; transition: 1s; }
+.btn { vertical-align: middle; cursor: pointer; white-space: nowrap; text-align: center; text-decoration: none; padding: 15px 40px; font-size: 20px; background-color: #0076c5; color: #FFF; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; -webkit-transition: 1s; -moz-transition: 1s; -o-transition: 1s; transition: 1s; }
 .btn:hover { background-color: #005e9d; }
-
-.icon { position: relative; top: 1px; line-height: 1; display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; }
 
 .blur-effect { position: fixed; width: 100%; height: 100%; background-size: 100%; background-repeat: no-repeat; z-index: 0; -webkit-transition: 1.3s; -moz-transition: 1.3s; -o-transition: 1.3s; transition: 1.3s; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -webkit-background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; background-size: 100%; }
 .blur-effect.is-visible { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20); opacity: 0.2; }
