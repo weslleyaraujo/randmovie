@@ -7,8 +7,9 @@ var randMovie = (function () {
 
 	_private = {
 		initialize: function () {
-			this.setLevels();
-			this.setApp();
+			_private.setLevels();
+      _private.bindRoutes();
+      _private.setRoutes();
 		},
 
 		setLevels: function () {
@@ -16,6 +17,11 @@ var randMovie = (function () {
 			levels.models = {};
 			levels.views = {};
 		},
+
+    setRoutes: function() {
+      new RandMovieApp.Routes();
+      Backbone.history.start();
+    },
 
 		setApp: function () {
 			levels.collections.movies = new RandMovieApp.Collections.Movies();
@@ -29,15 +35,28 @@ var randMovie = (function () {
 			elements.$blur.removeClass('is-visible');
 			elements.$item.removeClass('blur-in').addClass('blur-out');
 			levels.collections.movies.fetch();
-		}
+		},
+
+    bindRoutes: function() {
+     RandMovieApp.Helpers.events.on('index', _private.indexHandler);
+     RandMovieApp.Helpers.events.on('movie', _private.movieHandler);
+    },
+
+    indexHandler: function () {
+			_private.setApp();
+    },
+
+    movieHandler: function (movie) {
+       console.log('movie',movie);
+    }
 
 	};
 
 	_app = {
 		init: function (){
-			this.dom();
-			this.bind();
-			return this;
+			_app.dom();
+			_app.bind();
+			return _app;
 		},
 
 		dom: function (){

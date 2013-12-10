@@ -1,8 +1,9 @@
+# require gem
 require 'sinatra'
 require 'shotgun'
 require 'mongo'
-require 'json/ext'
-require 'sinatra/base'
+require 'json'
+require 'sinatra'
 require 'sinatra/assetpack'
 
 include Mongo
