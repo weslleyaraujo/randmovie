@@ -1,0 +1,43 @@
+/* line 5, ../../sass/module/movie-description.sass */
+.movie-description {
+  width: 870px;
+  margin: 0 auto;
+  font-size: 22px;
+  min-height: 350px;
+  padding-bottom: 10px;
+}
+
+/* line 12, ../../sass/module/movie-description.sass */
+.movie-description-image {
+  float: left;
+  width: 300px;
+  margin: 0 20px 0 0;
+}
+
+/* line 17, ../../sass/module/movie-description.sass */
+.movie-description-title {
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 800;
+  margin: 0;
+  line-height: 50px;
+}
+/* line 23, ../../sass/module/movie-description.sass */
+.movie-description-title.is-small {
+  font-size: 35px;
+}
+
+/* line 26, ../../sass/module/movie-description.sass */
+.movie-description-info {
+  float: left;
+  width: 550px;
+}
+
+/* line 30, ../../sass/module/movie-description.sass */
+.movie-description-year {
+  color: #8c8c8c;
+  font-weight: 700;
+  font-size: 33px;
+  margin: 10px 0;
+  text-align: right;
+}

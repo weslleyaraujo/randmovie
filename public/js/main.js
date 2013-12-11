@@ -34,7 +34,9 @@ var randMovie = (function () {
 			event.preventDefault();
 			elements.$blur.removeClass('is-visible');
 			elements.$item.removeClass('blur-in').addClass('blur-out');
-			levels.collections.movies.fetch();
+      setTimeout(function () {
+        levels.collections.movies.fetch();
+      }, 300);
 		},
 
     bindRoutes: function() {

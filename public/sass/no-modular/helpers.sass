@@ -1,0 +1,22 @@
+// compass css3
+@import 'compass/css3'
+
+.fade-in-content
+  +transition(1.5s)
+  +opacity(0)
+  &.is-visible
+    +opacity(1)
+
+.blur-out
+  visibility: hidden
+  +filter(blur(20px))
+  +transform(scale(1.5))
+  +opacity(0.25)
+  +transition(all 0.25s ease-out)
+
+.blur-in
+  visibility: visible
+  +filter(blur(0))
+  +transform(scale(1))
+  +opacity(1)
+  +transition(all 0.25s ease-out)

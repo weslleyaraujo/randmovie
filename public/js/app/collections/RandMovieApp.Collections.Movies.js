@@ -5,6 +5,6 @@
  */
 
 RandMovieApp.Collections.Movies = Backbone.Collection.extend({
-	url: '/api/get',
+	url: '/api/movie',
 	model: RandMovieApp.Models.Movie
 });

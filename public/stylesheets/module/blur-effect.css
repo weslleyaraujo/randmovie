@@ -1,0 +1,24 @@
+/* line 5, ../../sass/module/blur-effect.sass */
+.blur-effect {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 0;
+  -webkit-transition: 1.3s;
+  -moz-transition: 1.3s;
+  -o-transition: 1.3s;
+  transition: 1.3s;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+}
+/* line 15, ../../sass/module/blur-effect.sass */
+.blur-effect.is-visible {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+  opacity: 0.2;
+}

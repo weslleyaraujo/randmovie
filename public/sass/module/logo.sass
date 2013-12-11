@@ -1,0 +1,18 @@
+@import compass/css3
+
+$module-name: logo
+
+.#{$module-name}
+  width: 646px
+  text-align: center
+  margin: 250px auto 0 auto
+  font-size: 80px
+  font-weight: 300
+  display: none
+  +transform(scale(1.5))
+  +transition(1s)
+  .#{$module-name}-image
+    width: 100%
+  &.is-positioned
+    margin: 10px auto 0 auto
+    +transform(scale(1))

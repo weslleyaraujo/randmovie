@@ -1,0 +1,20 @@
+@import compass/css3
+
+$module-name: btn
+$default-color: #0076c5
+
+.#{$module-name}
+  vertical-align: middle
+  cursor: pointer
+  white-space: nowrap
+  text-align: center
+  text-decoration: none
+  padding: 15px 40px
+  font-size: 20px
+  background-color: $default-color
+  color: #FFF
+  +border-radius(5px)
+  +inline-block
+  +transition(1s)
+  &:hover
+    background-color: shade($default-color, 20%)
