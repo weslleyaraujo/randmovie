@@ -1,0 +1,8 @@
+index:
+    title: Home | Site
+    description: my Home description goes here.
+    keywords: keyword1, keyword2, keyword3
+about:
+    title: About | Site
+    description: my About description goes here.
+    keywords: keyword4, keyword5, keyword6
