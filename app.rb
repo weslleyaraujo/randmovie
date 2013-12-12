@@ -3,8 +3,12 @@ require 'sinatra'
 require 'mongo'
 require 'json/ext'
 require 'sinatra/assetpack'
+require 'sinatra/seo'
 
 class App < Sinatra::Base
+  # sintra seo
+  register Sinatra::Seo
+  set :seo_file, File.join(File.dirname(__FILE__), 'randmovie.seo')
 
   # mongo settings
   include Mongo
