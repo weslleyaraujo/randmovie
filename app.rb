@@ -4,7 +4,8 @@ require 'mongo'
 require 'json/ext'
 require 'sinatra/assetpack'
 
-class RandMovie < Sinatra::Base
+class App < Sinatra::Base
+
   # mongo settings
   include Mongo
 
@@ -64,5 +65,3 @@ class RandMovie < Sinatra::Base
     end
   end
 end
-
-RandMovie.run!
