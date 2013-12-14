@@ -19,9 +19,13 @@ class App < Sinatra::Base
     set :mongo_connection, conect
     set :mongo_db, conect.db('randmovie')
   end
-
+  
   def get_movie(count)
     return settings.mongo_db['movies'].find({ type: 'M', has_image: 1 }).limit(-1).skip(rand(count)).next_document()
+  end
+
+  def get_movie_filter(slug)
+    return settings.mongo_db['movies'].find({"slug" => slug }).next_document()
   end
 
   # asset pack config
@@ -71,8 +75,8 @@ class App < Sinatra::Base
 
   post '/api/movie' do
     content_type 'text/json'
-    countdb = settings.mongo_db['movies'].count()
-    while (movie = get_movie(countdb)) do
+    puts get_movie_filter(params[:slug])
+    while (movie = get_movie_filter(params[:slug])) do
       return movie.to_json
     end
   end

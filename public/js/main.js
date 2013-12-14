@@ -28,7 +28,8 @@ var randMovie = (function () {
 		setApp: function () {
 			levels.collections.movies = new RandMovieApp.Collections.Movies();
 			levels.views.movies = new RandMovieApp.Views.Movies({
-				collection: levels.collections.movies
+				collection: levels.collections.movies,
+        slug: RandMovieApp.Routes.slug
 			});
 		},
 
@@ -55,7 +56,17 @@ var randMovie = (function () {
     },
 
     movieHandler: function () {
-      console.log('movie');
+      if (!RandMovieApp.Routes.initialized) {
+        _private.setApp();
+      }
+      else {
+        levels.collections.movies.fetch({
+          data: {
+            slug: RandMovieApp.Routes.slug
+          },
+          type: 'POST'
+        });
+      }
       _app.show();
     },
 
