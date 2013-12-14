@@ -20,7 +20,9 @@ var randMovie = (function () {
 
     setRoutes: function() {
       new RandMovieApp.Routes();
-      Backbone.history.start();
+      Backbone.history.start({
+        pushstate: true
+      });
     },
 
 		setApp: function () {
@@ -45,11 +47,16 @@ var randMovie = (function () {
     },
 
     indexHandler: function () {
+      // reload the page if index is called again from displayed movie
+      if (RandMovieApp.Routes.initialized) {
+        window.location.reload();
+      }
 			_private.setApp();
     },
 
-    movieHandler: function (movie) {
-       console.log('movie',movie);
+    movieHandler: function () {
+      console.log('movie');
+      _app.show();
     },
 
     setInitialized: function () {

@@ -16,7 +16,7 @@ RandMovieApp.Views.Movies = Backbone.View.extend({
 	render: function(){
 		this.collection.each(function (model) {
 			this.addMovie(model);
-      Backbone.history.navigate('movie/' + model.get('slug'));
+      Backbone.history.navigate('movie/' + model.get('slug'), { trigguer: false });
 		}, this);
 	},
 

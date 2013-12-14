@@ -9,7 +9,8 @@ var RandMovieApp = {
 	Helpers: {},
 	Config: {},
 	Routes: {
-    initialized: false
+    initialized: false,
+    slug: null
   }
 };
 
@@ -38,12 +39,11 @@ RandMovieApp.Routes = Backbone.Router.extend({
   },
 
   movie: function (movie) {
-    console.log(movie);
+    RandMovieApp.Routes.slug = movie;
     RandMovieApp.Helpers.events.trigger('movie');
   },
 
   default: function () {
-    console.log('áeaeaeae');
     RandMovieApp.Helpers.events.trigger('index');
   }
 });
