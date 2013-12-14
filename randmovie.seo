@@ -1,8 +1,4 @@
 index:
-    title: Home | Site
-    description: my Home description goes here.
-    keywords: keyword1, keyword2, keyword3
-about:
-    title: About | Site
-    description: my About description goes here.
-    keywords: keyword4, keyword5, keyword6
+    title: Randmovie
+    description: Find out a rand movie to watch 
+    keywords: movie, movies, rand movie, give me movie, suggestion, suggestion movie

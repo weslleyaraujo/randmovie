@@ -50,8 +50,11 @@ var randMovie = (function () {
 
     movieHandler: function (movie) {
        console.log('movie',movie);
-    }
+    },
 
+    setInitialized: function () {
+      RandMovieApp.Routes.initialized = true;
+    }
 	};
 
 	_app = {
@@ -81,12 +84,10 @@ var randMovie = (function () {
       elements.$logo.fadeIn(function () {
         elements.$logo.addClass('is-positioned');
         elements.$content.addClass('is-visible');
+        _private.setInitialized();
       });
 		},
 
-		debug: function () {
-			return _private;
-		},
 
 		movieIn: function () {
 			var timer = setTimeout(function () {

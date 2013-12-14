@@ -11,16 +11,7 @@ RandMovieApp.Models.Movie = Backbone.Model.extend({
 	},
 
 	initialize: function () {
-		this.setTitle();
 		this.titleLenght();
-	},
-
-	setTitle: function () {
-		var title = $.trim(this.get('title'));
-		if (title.indexOf('"') != -1) {
-			title = title.split('"');
-			this.set('title', title[1] || '');
-		}
 	},
 
 	titleLenght: function () {

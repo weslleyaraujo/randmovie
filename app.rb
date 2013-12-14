@@ -68,4 +68,12 @@ class App < Sinatra::Base
       return movie.to_json
     end
   end
+
+  post '/api/movie' do
+    content_type 'text/json'
+    countdb = settings.mongo_db['movies'].count()
+    while (movie = get_movie(countdb)) do
+      return movie.to_json
+    end
+  end
 end
