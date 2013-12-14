@@ -49,7 +49,7 @@ var randMovie = (function () {
 
     indexHandler: function () {
       // reload the page if index is called again from displayed movie
-      if (RandMovieApp.Routes.initialized) {
+     if (RandMovieApp.Routes.initialized) {
         window.location.reload();
       }
 			_private.setApp();
@@ -89,6 +89,7 @@ var randMovie = (function () {
 			elements.$next = $('#next-movie');
 			elements.$item = $('#movie-item');
 			elements.$blur = $('.blur-effect');
+			elements.$title = $('title');
 		},
 
 		bind: function (){
@@ -106,7 +107,6 @@ var randMovie = (function () {
       });
 		},
 
-
 		movieIn: function () {
 			var timer = setTimeout(function () {
 				elements.$item.removeClass('blur-out').addClass('blur-in');
@@ -123,7 +123,13 @@ var randMovie = (function () {
 					elements.$blur.addClass('is-visible');
 				};
 			}, 800);
-		}
+		},
+
+    setTitle: function (model) {
+      if (model) {
+        elements.$title.text('Randmovie - ' + model.toJSON().title);
+      }
+    }
 	};
 
 	return _app;

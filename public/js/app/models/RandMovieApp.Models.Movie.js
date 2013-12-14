@@ -12,6 +12,7 @@ RandMovieApp.Models.Movie = Backbone.Model.extend({
 
 	initialize: function () {
 		this.titleLenght();
+    randMovie.setTitle(this);
 	},
 
 	titleLenght: function () {
@@ -20,4 +21,4 @@ RandMovieApp.Models.Movie = Backbone.Model.extend({
 			this.set('is_small', 'is-small');
 		}
 	}
-});
+})
