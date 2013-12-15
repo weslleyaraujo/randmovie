@@ -90,6 +90,7 @@ var randMovie = (function () {
 			elements.$item = $('#movie-item');
 			elements.$blur = $('.blur-effect');
 			elements.$title = $('title');
+			elements.$footer = $('footer');
 		},
 
 		bind: function (){
@@ -100,6 +101,7 @@ var randMovie = (function () {
 		show: function () {
 			elements.$body.removeClass('is-overflowed');
       elements.$content.removeClass('is-hidden');
+      elements.$footer.removeClass('is-hidden');
       elements.$logo.fadeIn(function () {
         elements.$logo.addClass('is-positioned');
         elements.$content.addClass('is-visible');
