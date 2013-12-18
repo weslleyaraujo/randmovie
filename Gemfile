@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
-source 'http://gems.github.com/'
 
-gem 'sinatra'
+gem 'sinatra', '1.4.3'
+gem 'sinatra-seo'
+gem 'bson_ext'
 gem 'mongo'
-gem 'sinatra-assetpack'
+gem 'sinatra-assetpack', :require => 'sinatra/assetpack'
 gem 'unicorn'

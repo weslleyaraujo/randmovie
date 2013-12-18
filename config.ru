@@ -1,3 +1,2 @@
-require './app.rb'
-
-run App.run!
+require File.join(File.dirname(__FILE__), 'app.rb')
+run App.new

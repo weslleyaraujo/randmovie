@@ -1,4 +1,3 @@
-# require gem
 require 'sinatra'
 require 'mongo'
 require 'json/ext'
