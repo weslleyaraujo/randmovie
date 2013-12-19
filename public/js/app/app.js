@@ -31,7 +31,8 @@ _.templateSettings = {
 RandMovieApp.Routes = Backbone.Router.extend({
   routes : {
     '' : 'index',
-    'movie/:movie': 'movie'
+    'movie/:movie': 'movie',
+    '*path': 'index'
   },
 
   index: function () {
