@@ -2,3 +2,7 @@ index:
     title: Randmovie
     description: Find out a rand movie to watch 
     keywords: movie, movies, rand movie, give me movie, suggestion, suggestion movie
+    fb_image: http://randmovie.com/images/randmovie-fb.png
+    fb_title: Randmovie
+    fb_description: Find out a random movie to watch :)
+    fb_site_name: Randmovie

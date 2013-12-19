@@ -10,10 +10,10 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:800italic,400,700,300' rel='stylesheet' type='text/css'>
     <%= css :application %>
 
-    <meta property="og:image" content="http://randmovie.com/images/randmovie-fb.png"/>
-    <meta property="og:title" content="Find out a random movie to watch :)"/>
-    <meta property="og:site_name" content="Randmovie"/>
-    <meta property="og:type" content="blog"/>
+    <meta property="og:image" content="<%= seo.index.fb_image %>"/>
+    <meta property="og:title" content="<%= seo.index.fb_title %>"/>
+    <meta property="og:description" content="<%= seo.index.fb_description %>"/>
+    <meta property="og:site_name" content="<%= seo.index.fb_site_name %>"/>
 
   </head>
   <body class="is-overflowed">
