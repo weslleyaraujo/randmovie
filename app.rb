@@ -12,6 +12,9 @@ class App < Sinatra::Base
   # mongo settings
   include Mongo
 
+  set :root, File.dirname(__FILE__)
+  set :public_folder, './public'
+
   # mongo config
   configure do
     conect = Mongo::Connection.new
@@ -62,6 +65,10 @@ class App < Sinatra::Base
 
   get '/' do
     erb :index
+  end
+
+  not_found do
+    erb :not_found
   end
 
   get '/api/movie' do
