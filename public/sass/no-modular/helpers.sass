@@ -7,16 +7,14 @@
   &.is-visible
     +opacity(1)
 
-.blur-out
+.scale-out
   visibility: hidden
-  +filter(blur(20px))
   +transform(scale(1.5))
   +opacity(0.25)
   +transition(all 0.25s ease-out)
 
-.blur-in
+.scale-in
   visibility: visible
-  +filter(blur(0))
   +transform(scale(1))
   +opacity(1)
   +transition(all 0.25s ease-out)

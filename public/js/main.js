@@ -36,7 +36,7 @@ var randMovie = (function () {
 		nextMovie: function (event) {
 			event.preventDefault();
 			elements.$blur.removeClass('is-visible');
-			elements.$item.removeClass('blur-in').addClass('blur-out');
+			elements.$item.removeClass('scale-in').addClass('scale-out');
       setTimeout(function () {
         levels.collections.movies.fetch();
       }, 300);
@@ -111,7 +111,7 @@ var randMovie = (function () {
 
 		movieIn: function () {
 			var timer = setTimeout(function () {
-				elements.$item.removeClass('blur-out').addClass('blur-in');
+				elements.$item.removeClass('scale-out').addClass('scale-in');
 				timer = clearTimeout(timer);
 			}, 500);
 		},

@@ -51,10 +51,14 @@
     <!-- Movie Template -->
     <script type="text/template" data-template="movie">
       <div class="movie-description-image">
-        <img src="/static/cover/cover-{{ imdb_id }}.jpg" />
+        <a href="{{ imdb_url }}" target="_blank" title="{{ title }}">
+          <img src="/static/cover/cover-{{ imdb_id }}.jpg" />
+        </a>
       </div>
       <div class="movie-description-info">
-        <h3 class="movie-description-title {{ is_small }}">{{ title }}</h3>
+        <a href="{{ imdb_url }}" target="_blank" class="movie-description-link-title">
+          <h3 class="movie-description-title {{ is_small }}">{{ title }}</h3>
+        </a>
         <h4 class="movie-description-year">({{ year }})</h4>
         <p>{{ plot_simple }}</p>
       </div>
